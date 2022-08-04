@@ -9,41 +9,18 @@ public class Booking {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "booking_time")
-    private String booking_time;
-    @Column(name = "plug_time")
-    private String plug_time;
-    @Column(name = "unplug_time")
-    private String unplug_time;
     @Column(name = "user_id")
-    private Long user_id;
+    private String user_id;
     @Column(name = "cs_id")
-    private Long cs_id;
-
-
-    public String getBooking_time() {
-        return booking_time;
-    }
-
-    public void setBooking_time(String booking_time) {
-        this.booking_time = booking_time;
-    }
-
-    public String getPlug_time() {
-        return plug_time;
-    }
-
-    public void setPlug_time(String plug_time) {
-        this.plug_time = plug_time;
-    }
-
-    public String getUnplug_time() {
-        return unplug_time;
-    }
-
-    public void setUnplug_time(String unplug_time) {
-        this.unplug_time = unplug_time;
-    }
+    private String cs_id;
+    @Column(name = "cardHolderName")
+    private String cardHolderName;
+    @Column(name = "cardNumber")
+    private String cardNumber;
+    @Column(name = "expDate")
+    private String expDate;
+    @Column(name = "cvv")
+    private String cvv;
 
     public Long getId() {
         return id;
@@ -53,19 +30,63 @@ public class Booking {
         this.id = id;
     }
 
-    public Long getUser_id() {
+    public String getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(Long user_id) {
+    public void setUser_id(String user_id) {
         this.user_id = user_id;
     }
 
-    public Long getCs_id() {
+    public String getCs_id() {
         return cs_id;
     }
 
-    public void setCs_id(Long cs_id) {
+    public void setCs_id(String cs_id) {
         this.cs_id = cs_id;
+    }
+
+    public String getCardHolderName() {
+        return cardHolderName;
+    }
+
+    public void setCardHolderName(String cardHolderName) {
+        this.cardHolderName = cardHolderName;
+    }
+
+    public String getCardNumber() {
+        return cardNumber;
+    }
+
+    public void setCardNumber(String cardNumber) {
+        this.cardNumber = cardNumber;
+    }
+
+    public String getExpDate() {
+        return expDate;
+    }
+
+    public void setExpDate(String expDate) {
+        this.expDate = expDate;
+    }
+
+    public String getCvv() {
+        return cvv;
+    }
+
+    public void setCvv(String cvv) {
+        this.cvv = cvv;
+    }
+
+    public Booking(String user_id, String cs_id, String cardHolderName, String cardNumber, String expDate, String cvv) {
+        this.user_id = user_id;
+        this.cs_id = cs_id;
+        this.cardHolderName = cardHolderName;
+        this.cardNumber = cardNumber;
+        this.expDate = expDate;
+        this.cvv = cvv;
+    }
+
+    public Booking() {
     }
 }

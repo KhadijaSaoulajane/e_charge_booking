@@ -15,7 +15,7 @@ public class BookingService {
         this.bookingRepo = bookingRepo;
     }
 
-    public Booking createExam(Booking booking) {
+    public Booking saveBooking(Booking booking) {
         return bookingRepo.save(booking);
     }
 }
