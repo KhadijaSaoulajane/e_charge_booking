@@ -18,7 +18,7 @@ public class BookingController {
     }
 
 
-    @GetMapping(value="/saveBooking",consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @GetMapping(value="/saveBooking")
     public String bookSlot(@RequestParam("chargingStationId") String chargingStationId,
                            @RequestParam("userId") String userId,
                            @RequestParam("cardHolderName") String cardHolderName,
